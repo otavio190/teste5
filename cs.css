@@ -1,0 +1,175 @@
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #202020;
+}
+
+.profile-container {
+  position: relative;
+  max-width: 1080px;
+  max-height: 1920px;
+  border: 10px solid #444;
+  border-radius: 20x;
+  overflow: hidden;
+}
+
+.profile-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: url('https://i.pinimg.com/originals/ee/a1/a2/eea1a2d899544ede0b88e9c51eeed6c1.gif'); /* Caminho para seu wallpaper */
+  background-size: cover;
+
+}
+
+.profile-square {
+  width: 100%;
+  height: 200px;
+  background-color: #444;
+}
+
+
+
+.profile-header {
+  position: relative;
+}
+
+.profile-picture-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+
+}
+
+.profile-picture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.profile-picture-container:hover .profile-picture {
+  transform: scale(1.1);
+}
+
+.profile-picture-container:hover .profile-picture-overlay {
+  opacity: 1;
+}
+
+.profile-details {
+  margin-top: 5px;
+
+}
+
+h2, p {
+  color: #ddd;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.photo-gallery img {
+  width: 200px; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+
+
+
+.photo-gallery img:hover {
+  transform: scale(1.1);
+}
+.profile-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin-top: 50px; /* Adicionando margem superior para os textos descerem mais */
+}
+
+
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal-content img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.profile-container {
+  width: 90%; /* Largura do container */
+  max-width: 1100px; /* Largura máxima */
+  margin: 0 auto; /* Centralizar o container */
+}
+
+/* CSS para o player de música */
+.music-player {
+  margin-top: 20px;
+}
+
+.music-player audio {
+  width: 50%; /* Largura total */
+  background-color: #00000062; /* Cor de fundo */
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.music-player audio::-webkit-media-controls-panel {
+  background-color: #333; /* Cor de fundo dos controles */
+}
+
